@@ -1,9 +1,13 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 app.use(express.json())
-const cors = require('cors')
+const Card = require('./models/card')
 
+const cors = require('cors')
 app.use(cors())
+
 app.use(express.static('build'))
 
 const requestLogger = (request, response, next) => {
@@ -13,8 +17,22 @@ const requestLogger = (request, response, next) => {
     console.log('---')
     next()
   }
-  
-  app.use(requestLogger)
+
+app.use(requestLogger)
+
+const mongoose = require('mongoose')
+
+const url = process.env.MONGODB_URI
+
+console.log('connecting to', url)
+
+mongoose.connect(url)
+  .then(result => {
+    console.log('connected to MongoDB')
+  })
+  .catch((error) => {
+    console.log('error connecting to MongoDB:', error.message)
+  })
 
 let cards = [
     {
@@ -74,52 +92,44 @@ let cards = [
     res.send('<h1>Hello World!</h1>')
   })
 
+  app.get('/api/cards', (request, response) => {
+    Card.find({}).then(cards => {
+      response.json(cards)
+    })
+  })
+
   app.get('/api/cards/:id', (request, response) => {
-    const id = Number(request.params.id)
-    const card = cards.find(card => card.id === id)
-    if (card) {
-        response.json(card)
-      } else {
-        response.status(404).end()
-      }
+    Card.findById(request.params.id).then(card => {
+      response.json(card)
+    })
   })
   
-  app.get('/api/cards', (req, res) => {
-    res.json(cards)
-  })
-
-  app.delete('/api/cards/:id', (request, response) => {
-    const id = Number(request.params.id)
-    cards = cards.filter(card => card.id !== id)
-  
-    response.status(204).end()
-  })
-
-//   app.post('/api/cards', (request, response) => {
-//     const card = request.body
-//     console.log(card)
-//     response.json(card)
-//   })
-
   app.post('/api/cards', (request, response) => {
-    console.log('request.body', request.body);
     const maxId = cards.length > 0
-      ? Math.max(...cards.map(c => c.id)) 
-      : 0
+    ? Math.max(...cards.map(c => c.id)) 
+    : 0
 
-    console.log('maxID', maxId)
+    const body = request.body
   
-    const card = request.body
-    console.log('card', card)
-    card.id = maxId + 1
+    if (body.question === undefined) {
+      return response.status(400).json({ error: 'question missing' })
+    }
   
-    cards = cards.concat(card)
+    const card = new Card({
+      id: maxId + 1,
+      courseId: body.courseId || null,
+      partId: body.partId || null,
+      question: body.question,
+      answers: body.answers, 
+      correctAnswerId: body.correctAnswerId
+    })
   
-    response.json(card)
+    card.save().then(savedCard => {
+      response.json(savedCard)
+    })
   })
-  
-  
-  const PORT = process.env.PORT || 3001
+
+  const PORT = process.env.PORT
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
   })

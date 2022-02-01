@@ -4,9 +4,9 @@ Content-Type: application/json
 {
     "courseId": "2",
     "partId": "1",
-    "QAndA": {
-        "question": "Aivokuori vastaa...",
-        "answers": [
+    "question": "Aivokuori vastaa...",
+    "answers": 
+        [
             {
                 "id": 1, 
                 "answer": "autonomisen hermoston säätelystä"
@@ -24,7 +24,6 @@ Content-Type: application/json
                 "answer": "tunnekokemusten heräämisestä"
             }
         ],
-        "correctAnswerId": 2
-    }
-    
+    "correctAnswerId": 2
 }
+    
