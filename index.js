@@ -100,7 +100,15 @@ let cards = [
 
   app.get('/api/cards/:id', (request, response) => {
     Card.findById(request.params.id).then(card => {
-      response.json(card)
+      if (card) {
+        response.json(card)
+      } else {
+        response.status(404).end()
+      }
+    })
+    .catch(error => {
+      console.log(error)
+      response.status(500).end()
     })
   })
   
