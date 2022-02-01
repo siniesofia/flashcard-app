@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "courseId": "2",
     "partId": "1",
-    "question": "Aivokuori vastaa...",
+    "question": "Limbinen järjestelmä vastaa...",
     "answers": 
         [
             {
