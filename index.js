@@ -131,11 +131,9 @@ app.post('/api/cards', (request, response, next) => {
     partId: body.partId || null,
     question: body.question,
     answers: body.answers,
-    correctAnswerId: body.CorrectAnswerId
+    correctAnswerId: body.correctAnswerId
   })
 
-  console.log('body.question', body.question)
-  console.log('body.correctAnswerId', body.CorrectAnswerId)
 
   card.save()
     .then(savedCard => {
