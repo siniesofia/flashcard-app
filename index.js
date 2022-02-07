@@ -128,7 +128,7 @@ app.post('/api/cards', (request, response, next) => {
   if (body.question === undefined) {
     return response.status(400).json({ error: 'question missing' })
   }
-  
+
   const card = new Card({
     id: maxId + 1,
     courseId: body.courseId || null,
@@ -140,7 +140,7 @@ app.post('/api/cards', (request, response, next) => {
 
   console.log('card.answers(length', card.answers.length)
   console.log('body.answers', body.answers)
-  
+
   card.save()
     .then(savedCard => {
       response.json(savedCard.toJSON())
@@ -159,7 +159,7 @@ app.delete('/api/cards/:id', (request, response, next) => {
 const unknownEndpoint = (request, response) => {
   response.status(404).send({ error: 'unknown endpoint' })
 }
-  
+
 app.use(unknownEndpoint)
 
 app.use(errorHandler)
