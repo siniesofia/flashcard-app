@@ -23,10 +23,7 @@ const cardSchema = new mongoose.Schema({
     type: Object,
     required: true
   },
-  correctAnswerId: {
-    type: Number, 
-    // required: true
-  }
+  correctAnswerId: Number
 
 })
 

@@ -117,29 +117,24 @@ app.get('/api/cards/:id', (request, response, next) => {
   })
     .catch(error => next(error))
 })
-  
+
 app.post('/api/cards', (request, response, next) => {
   const maxId = cards.length > 0
-    ? Math.max(...cards.map(c => c.id)) 
+    ? Math.max(...cards.map(c => c.id))
     : 0
 
   const body = request.body
-
-  if (body.question === undefined) {
-    return response.status(400).json({ error: 'question missing' })
-  }
 
   const card = new Card({
     id: maxId + 1,
     courseId: body.courseId || null,
     partId: body.partId || null,
     question: body.question,
-    answers: body.answers, 
+    answers: body.answers,
     correctAnswerId: body.correctAnswerId
   })
 
-  console.log('card.answers(length', card.answers.length)
-  console.log('body.answers', body.answers)
+  console.log('body.question', body.question)
 
   card.save()
     .then(savedCard => {
