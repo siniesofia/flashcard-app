@@ -1,14 +1,24 @@
-require('dotenv').config()
-
 const express = require('express')
 const app = express()
-app.use(express.json())
+const cors = require('cors')
+require('dotenv').config()
 const Card = require('./models/card')
 
-const cors = require('cors')
-app.use(cors())
-
 app.use(express.static('build'))
+app.use(cors())
+app.use(express.json())
+
+const errorHandler = (error, request, response, next) => {
+  console.error(error.message)
+
+  if (error.name === 'CastError') {
+    return response.status(400).send({ error: 'malformatted id' })
+  } else if (error.name === 'ValidationError') {
+    return response.status(400).json({ error: error.message })
+  }
+
+  next(error)
+}
 
 const requestLogger = (request, response, next) => {
     console.log('Method:', request.method)
@@ -87,7 +97,6 @@ let cards = [
     }
   ]
 
-
   app.get('/', (req, res) => {
     res.send('<h1>Hello World!</h1>')
   })
@@ -106,14 +115,14 @@ let cards = [
         response.status(404).end()
       }
     })
-    // .catch(error => next(error))
-    .catch(error => {
-      console.log(error)
-      response.status(400).send({ error: 'malformatted id' })
-    })
+    .catch(error => next(error))
+    // .catch(error => {
+    //   console.log(error)
+    //   response.status(400).send({ error: 'malformatted id' })
+    // })
   })
   
-  app.post('/api/cards', (request, response) => {
+  app.post('/api/cards', (request, response, next) => {
     const maxId = cards.length > 0
     ? Math.max(...cards.map(c => c.id)) 
     : 0
@@ -133,10 +142,28 @@ let cards = [
       correctAnswerId: body.correctAnswerId
     })
   
-    card.save().then(savedCard => {
-      response.json(savedCard)
-    })
+    card.save()
+      .then(savedCard => {
+        response.json(savedCard.toJSON())
+      })
+      .catch(error => next(error))
   })
+
+  app.delete('/api/cards/:id', (request, response, next) => {
+    Card.findByIdAndRemove(request.params.id)
+      .then(result => {
+        response.status(204).end()
+      })
+      .catch(error => next(error))
+  })
+
+  const unknownEndpoint = (request, response) => {
+    response.status(404).send({ error: 'unknown endpoint' })
+  }
+  
+  app.use(unknownEndpoint)
+  
+  app.use(errorHandler)
 
   const PORT = process.env.PORT
   app.listen(PORT, () => {

@@ -15,8 +15,15 @@ mongoose.connect(url)
     id: Number,
     courseId: Number,
     partId: Number,
-    question: String,
-    answers: Object, 
+    question: {
+      type: String,
+      required: true
+    },
+    answers: {
+      type: Object,
+      // minlength: 4,
+      // required: true
+    },
     correctAnswerId: Number
   })
 
