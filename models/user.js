@@ -1,16 +1,24 @@
 const mongoose = require('mongoose')
+const uniqueValidator = require('mongoose-unique-validator')
 
 const userSchema = mongoose.Schema({
-  username: String,
-  name: String,
+  username: {
+    type: String,
+    unique: true
+  },
   passwordHash: String,
-  rightAnswers: [
+  correctAnswers: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Card'
+      card: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Card'
+      },
+      timestamps: Object
     }
-  ],
+  ]
 })
+
+userSchema.plugin(uniqueValidator)
 
 userSchema.set('toJSON', {
   transform: (document, returnedObject) => {
