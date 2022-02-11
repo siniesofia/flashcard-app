@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/courses
+Content-Type: application/json
+
+{
+    "name": "Psykologia",
+    "parts": [
+    ],
+    "cards": [
+    ]
+}
+    

@@ -1,0 +1,1 @@
+DELETE http://localhost:3001/api/courses/620644c25c51f0e5ab78956e

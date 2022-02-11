@@ -11,27 +11,21 @@ mongoose.connect(url)
     console.log('error connecting to MongoDB:', error.message)
   })
 
-const cardSchema = new mongoose.Schema({
+const partSchema = new mongoose.Schema({
+  name: String,
   courseId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Course'
   },
-  partId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Part'
-  },
-  question: {
-    type: String,
-    required: true
-  },
-  answers: {
-    type: Object,
-    required: true
-  },
-  correctAnswerId: Number
+  cards: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Card'
+    }
+  ],
 })
 
-cardSchema.set('toJSON', {
+partSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
@@ -39,4 +33,4 @@ cardSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Card', cardSchema)
+module.exports = mongoose.model('Part', partSchema)

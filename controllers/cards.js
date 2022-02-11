@@ -1,8 +1,10 @@
 const cardsRouter = require('express').Router()
 const Card = require('../models/card')
+const Course = require('../models/course')
+const Part = require('../models/part')
 
 cardsRouter.get('/', async (request, response) => {
-  const cards = await Card.find({})
+  const cards = await Card.find({}).populate('partId', { name: 1 }).populate('courseId', { name: 1 })
   response.json(cards.map(cards => cards.toJSON()))
 })
 
@@ -18,16 +20,27 @@ cardsRouter.get('/:id', async (request, response) => {
 cardsRouter.post('/', async (request, response) => {
   const body = request.body
 
+  const course = await Course.findById(body.courseId)
+  const part = await Part.findById(body.partId)
+
   const card = new Card({
-    id: 1,
-    courseId: body.courseId || null,
-    partId: body.partId || null,
+    courseId: body.courseId,
+    partId: body.partId,
     question: body.question,
     answers: body.answers,
-    correctAnswerId: body.correctAnswerId
+    correctAnswerId: body.correctAnswerId,
+    course: course._id,
+    part: part._id
   })
 
   const savedCard = await card.save()
+
+  course.cards = course.cards.concat(savedCard._id)
+  await course.save()
+
+  part.cards = course.parts.concat(savedCard._id)
+  await part.save()
+
   response.json(savedCard.toJSON())
 
 })

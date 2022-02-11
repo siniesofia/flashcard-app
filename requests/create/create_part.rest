@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/parts
+Content-Type: application/json
+
+{
+    "name": "Artikkeli 2", 
+    "courseId": "62064823dc53e2c2bff3bef5"
+}
