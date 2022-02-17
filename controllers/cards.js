@@ -28,7 +28,6 @@ cardsRouter.post('/', async (request, response) => {
     partId: body.partId,
     question: body.question,
     answers: body.answers,
-    correctAnswerId: body.correctAnswerId,
     course: course._id,
     part: part._id
   })

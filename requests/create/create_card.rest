@@ -2,31 +2,16 @@ POST http://localhost:3001/api/cards
 Content-Type: application/json
 
 {
-    "courseId": "62064823dc53e2c2bff3bef5",
-    "partId": "62064831dc53e2c2bff3befa",
-    "question": "Artikkelikysymys 1",
-    "answers": 
-        [
-            {
-                "id": 1, 
-                "answer": "tilastokysymys 1",
-                "correctAnswer": false,
-            },
-            {
-                "id": 2, 
-                "answer": "tilastokysymys 2",
-                "correctAnswer": true
-            },
-            {
-                "id": 3, 
-                "answer": "tilastokysymys 3",
-                "correctAnswer": false
-            },
-            {
-                "id": 4, 
-                "answer": "tilastokysymys 3",
-                "correctAnswer": false
-            }
-        ]
+  "question": "kysymys2",
+  "courseId": "62064823dc53e2c2bff3bef5",
+  "partId": "62064831dc53e2c2bff3befa",
+  "answers": [
+    { "id": 1, "answer": "p" },
+    { "id": 2, "answer": "p" },
+    { "id": 3, "answer": "p" },
+    { "id": 4, "answer": "p" }
+  ],
+  "correctAnswerId": "2"
 }
+
     
