@@ -5,13 +5,12 @@ Content-Type: application/json
   "question": "kysymys2",
   "courseId": "62064823dc53e2c2bff3bef5",
   "partId": "62064831dc53e2c2bff3befa",
+  "questiontypeId": "620e2a5313353117b5e4df11",
   "answers": [
-    { "id": 1, "answer": "p" },
-    { "id": 2, "answer": "p" },
-    { "id": 3, "answer": "p" },
-    { "id": 4, "answer": "p" }
-  ],
-  "correctAnswerId": "2"
+    "620e32c99310b501691b928c",
+    "620e32dc98fefcc21e53f07c",
+    "620e32d498fefcc21e53f079"
+  ]
 }
 
     

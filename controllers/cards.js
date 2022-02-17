@@ -4,7 +4,11 @@ const Course = require('../models/course')
 const Part = require('../models/part')
 
 cardsRouter.get('/', async (request, response) => {
-  const cards = await Card.find({}).populate('partId', { name: 1 }).populate('courseId', { name: 1 })
+  const cards = await Card.find({})
+    .populate('partId', { name: 1 })
+    .populate('courseId', { name: 1 })
+    .populate('questiontypeId', { name: 1 })
+    // .populate('answerId', { content: 1 })
   response.json(cards.map(cards => cards.toJSON()))
 })
 
@@ -26,6 +30,7 @@ cardsRouter.post('/', async (request, response) => {
   const card = new Card({
     courseId: body.courseId,
     partId: body.partId,
+    questiontypeId: body.questiontypeId,
     question: body.question,
     answers: body.answers,
     course: course._id,
