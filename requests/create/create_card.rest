@@ -10,7 +10,7 @@ Content-Type: application/json
             {
                 "id": 1, 
                 "answer": "tilastokysymys 1",
-                "correctAnswer": false
+                "correctAnswer": false,
             },
             {
                 "id": 2, 
