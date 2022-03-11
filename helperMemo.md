@@ -1,20 +1,22 @@
 # NEXT UP
 
-## Frontti
+## Front end
 
-- uloskirjautuminen
-- näkymän muuttaminen kun on kirjautunut sisään
-- ilmoitukset onnistuneesta sisään- ja uloskirjautumisesta
-- App.js refaktorointi
-  - komponentit omiin tiedostoihin ja järkevään kansiorakenteeseen
+- signing out
+- changing the view when user has signed in
+- notify users when sign in and sign out has been succesful
+- enable registration
+- changes to the main menu
+- create functionality for revision of questions
+- create info page
+- create omat tiedot page
 
-## Bäkki
+## Backend
 
-- tietokantarakenteen järkevyyden tarkistus
+- check that the data base structure is optimal 
+- 
+# BUGS
 
-# BUGIT
+# IDEAS
 
-# IDEAT
-
-- kertaustoiminnallisuuden rakentaminen
-- omien kysymysten luomisen mahdollistaminen
+- enable users to create their own questions
