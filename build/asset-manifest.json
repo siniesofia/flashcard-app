@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.e1a8123c.js",
+    "main.css": "/static/css/main.c029554b.css",
+    "main.js": "/static/js/main.1e181d95.js",
     "static/media/logopohja.jpg": "/static/media/logopohja.afa13a973dbea72895fc.jpg",
     "index.html": "/index.html",
-    "main.e1a8123c.js.map": "/static/js/main.e1a8123c.js.map"
+    "main.c029554b.css.map": "/static/css/main.c029554b.css.map",
+    "main.1e181d95.js.map": "/static/js/main.1e181d95.js.map"
   },
   "entrypoints": [
-    "static/js/main.e1a8123c.js"
+    "static/css/main.c029554b.css",
+    "static/js/main.1e181d95.js"
   ]
 }
