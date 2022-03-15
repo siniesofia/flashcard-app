@@ -10,7 +10,8 @@
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail",
-    "test": "NODE_ENV=test jest --verbose --runInBand"
+    "test": "NODE_ENV=test jest --verbose --runInBand",
+    "server": "json-server -p3000 --watch db.json"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "eslint": "^8.8.0",
     "jest": "^27.5.1",
+    "json-server": "^0.17.0",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2"
   }
