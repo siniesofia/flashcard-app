@@ -11,7 +11,7 @@
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail",
     "test": "NODE_ENV=test jest --verbose --runInBand",
-    "server": "json-server -p3000 --watch db.json"
+    "server": "json-server -p3001 --watch db.json"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "dotenv": "^15.0.0",
     "express": "^4.17.2",
     "express-async-errors": "^3.1.1",
+    "hamburger-react": "^2.4.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.9",
     "mongoose-unique-validator": "^3.0.0"
