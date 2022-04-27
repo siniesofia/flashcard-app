@@ -2,11 +2,18 @@ const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 
 const userSchema = mongoose.Schema({
-  username: {
+  username: String,
+  email: {
     type: String,
-    unique: true
+    unique: true,
+    required: 'Sähköpostiosoite vaaditaan',
+    validate: {
+      validator: function(v) {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v)
+      },
+      message: "Tarkista sähköpostiosoite"
+    },
   },
-  email: String,
   passwordHash: String,
   correctAnswers: [
     {
