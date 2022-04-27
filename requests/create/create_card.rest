@@ -2,15 +2,14 @@ POST http://localhost:3001/api/cards
 Content-Type: application/json
 
 {
-  "question": "Viestintäoikeuden tutkimus alkoi Helsingin yliopiston oikeustieteellisessä tiedekunnassa vuonna...",
-  "courseId": "626017b67a35cb27312f4201",
-  "partId": "62601dd0b81b980fa7bdcf43",
+  "question": "Tilastokirjan mukaan t-testi",
+  "courseId": "626018057a35cb27312f4203",
+  "partId": "62601e35b81b980fa7bdcf52",
   "questiontypeId": "62601e90b81b980fa7bdcf56",
   "answers": [
-    "62601f05b81b980fa7bdcf58",
-    "62601f11b81b980fa7bdcf5a",
-    "62601f1eb81b980fa7bdcf5c",
-    "62601f26b81b980fa7bdcf5e"
+    "62602209b81b980fa7bdcfaa",
+    "62602226b81b980fa7bdcfac",
+    "62602236b81b980fa7bdcfae"
   ]
 }
 

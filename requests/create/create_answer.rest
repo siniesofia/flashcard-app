@@ -2,7 +2,7 @@ POST http://localhost:3001/api/answers
 Content-Type: application/json
 
 {
-    "content": "vastaus",
-    "correctAnswer": true
+    "content": "on mikä tahansa tilastollinen testi, joka noudattaa Spearmanin t-jakaumaa kun vaihtoehtoinen hypoteesi ei ole voimassa",
+    "correctAnswer": false
 }
     

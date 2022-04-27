@@ -6,6 +6,7 @@ const userSchema = mongoose.Schema({
     type: String,
     unique: true
   },
+  email: String,
   passwordHash: String,
   correctAnswers: [
     {
