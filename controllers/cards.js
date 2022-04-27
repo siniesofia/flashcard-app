@@ -33,17 +33,9 @@ cardsRouter.post('/', async (request, response) => {
     questiontypeId: body.questiontypeId,
     question: body.question,
     answers: body.answers,
-    course: course._id,
-    part: part._id
   })
 
   const savedCard = await card.save()
-
-  course.cards = course.cards.concat(savedCard._id)
-  await course.save()
-
-  part.cards = course.parts.concat(savedCard._id)
-  await part.save()
 
   response.json(savedCard.toJSON())
 

@@ -48,7 +48,7 @@
     },
     {
       "_id": "3db5f05c-038c-4248-8b9e-8318327dd294",
-      "name": "tilastokirja",
+      "name": "tilastotiede",
       "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
       "cards": ["1e05c6e7-d41a-491d-b6e1-69d86d75fea5", "2e29d4d2-f4bb-46e2-9df7-be002bc18117"]
     }
@@ -322,7 +322,7 @@
     {
       "_id": "d7585070-573a-466c-8b6a-f2389705be77",
       "correctAnswer": true,
-      "content": "mielenterveyden häiriö, saa usein alkunsa elämän suurista vastoinkäymisistä"
+      "content": "mielenterveyden häiriö, joka saa usein alkunsa elämän suurista vastoinkäymisistä"
     },
     {
       "_id": "93ef49d1-d179-4dad-a949-9424c6bef25c",

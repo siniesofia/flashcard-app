@@ -23,16 +23,12 @@ partsRouter.post('/', async (request, response) => {
   const course = await Course.findById(body.courseId)
 
   const part = new Part({
+    id: 1,
     name: body.name,
-    courseId: body.courseId,
-    cards: body.cards,
-    course: course._id
+    courseId: body.courseId
   })
 
   const savedPart = await part.save()
-
-  course.parts = course.parts.concat(savedPart._id)
-  await course.save()
 
   response.json(savedPart.toJSON())
 

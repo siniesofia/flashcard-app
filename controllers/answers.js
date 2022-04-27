@@ -24,9 +24,8 @@ answersRouter.post('/', async (request, response) => {
   // const part = await Part.findById(body.partId)
 
   const answer = new Answer({
-    content: body.contet,
-    correctAnswer: body.correctAnswer,
-    cardId: body.cardId,
+    content: body.content,
+    correctAnswer: body.correctAnswer
   })
 
   const savedAnswer = await answer.save()

@@ -22,8 +22,7 @@ coursesRouter.post('/', async (request, response) => {
   const course = new Course({
     id: 1,
     name: body.name || null,
-    parts: body.parts || null,
-    cards: body.cards
+    year: body.year || null,
   })
 
   const savedCourse = await course.save()

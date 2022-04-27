@@ -2,14 +2,15 @@ POST http://localhost:3001/api/cards
 Content-Type: application/json
 
 {
-  "question": "kysymys2",
-  "courseId": "62064823dc53e2c2bff3bef5",
-  "partId": "62064831dc53e2c2bff3befa",
-  "questiontypeId": "620e2a5313353117b5e4df11",
+  "question": "Viestintäoikeuden tutkimus alkoi Helsingin yliopiston oikeustieteellisessä tiedekunnassa vuonna...",
+  "courseId": "626017b67a35cb27312f4201",
+  "partId": "62601dd0b81b980fa7bdcf43",
+  "questiontypeId": "62601e90b81b980fa7bdcf56",
   "answers": [
-    "620e32c99310b501691b928c",
-    "620e32dc98fefcc21e53f07c",
-    "620e32d498fefcc21e53f079"
+    "62601f05b81b980fa7bdcf58",
+    "62601f11b81b980fa7bdcf5a",
+    "62601f1eb81b980fa7bdcf5c",
+    "62601f26b81b980fa7bdcf5e"
   ]
 }
 

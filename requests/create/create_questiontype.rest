@@ -2,5 +2,5 @@ POST http://localhost:3001/api/questiontypes
 Content-Type: application/json
 
 {
-    "name": "open ended"
+    "name": "multiple choice"
 }
