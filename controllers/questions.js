@@ -5,11 +5,10 @@ const Part = require('../models/part')
 
 questionsRouter.get('/', async (request, response) => {
   const questions = await Question.find({})
-    // .populate('partId', { name: 1 })
-    // .populate('courseId', { name: 1 })
-    // .populate('questiontypeId', { name: 1 })
+    .populate('partId', { name: 1 })
+    .populate('courseId', { name: 1 })
+    .populate('questiontypeId', { name: 1 })
     .populate('answers')
-  // .populate('answerId', { content: 1 })
   response.json(questions.map(questions => questions.toJSON()))
 })
 
