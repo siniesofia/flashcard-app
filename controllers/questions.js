@@ -4,11 +4,11 @@ const Course = require('../models/course')
 const Part = require('../models/part')
 
 questionsRouter.get('/', async (request, response) => {
-  const question = await Question.find({})
+  const questions = await Question.find({})
     .populate('partId', { name: 1 })
     .populate('courseId', { name: 1 })
     .populate('questiontypeId', { name: 1 })
-    // .populate('answerId', { content: 1 })
+  // .populate('answerId', { content: 1 })
   response.json(questions.map(questions => questions.toJSON()))
 })
 
@@ -38,7 +38,6 @@ questionsRouter.post('/', async (request, response) => {
   const savedQuestion = await question.save()
 
   response.json(savedQuestion.toJSON())
-
 })
 
 questionsRouter.delete('/:id', async (request, response) => {
