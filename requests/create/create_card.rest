@@ -2,14 +2,14 @@ POST http://localhost:3001/api/cards
 Content-Type: application/json
 
 {
-  "question": "kysymys2",
-  "courseId": "62064823dc53e2c2bff3bef5",
-  "partId": "62064831dc53e2c2bff3befa",
-  "questiontypeId": "620e2a5313353117b5e4df11",
+  "question": "Tilastokirjan mukaan t-testi",
+  "courseId": "626018057a35cb27312f4203",
+  "partId": "62601e35b81b980fa7bdcf52",
+  "questiontypeId": "62601e90b81b980fa7bdcf56",
   "answers": [
-    "620e32c99310b501691b928c",
-    "620e32dc98fefcc21e53f07c",
-    "620e32d498fefcc21e53f079"
+    "62602209b81b980fa7bdcfaa",
+    "62602226b81b980fa7bdcfac",
+    "62602236b81b980fa7bdcfae"
   ]
 }
 

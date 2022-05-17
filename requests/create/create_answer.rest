@@ -2,8 +2,7 @@ POST http://localhost:3001/api/answers
 Content-Type: application/json
 
 {
-    "contet": "vastaus",
-    "correctAnswer": true,
-    "cardId": "620e304778da931d5dcd8a0d"
+    "content": "on mikä tahansa tilastollinen testi, joka noudattaa Spearmanin t-jakaumaa kun vaihtoehtoinen hypoteesi ei ole voimassa",
+    "correctAnswer": false
 }
     

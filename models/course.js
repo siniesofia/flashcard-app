@@ -13,18 +13,7 @@ mongoose.connect(url)
 
 const courseSchema = new mongoose.Schema({
   name: String,
-  parts: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Part'
-    }
-  ],
-  cards: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Card'
-    }
-  ],
+  year: String,
 })
 
 courseSchema.set('toJSON', {

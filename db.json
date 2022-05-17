@@ -1,0 +1,393 @@
+{
+  "courses": [
+    {
+      "_id": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "name": "oikeustiede",
+      "parts": ["65ee4caf-04d8-4bee-9d82-2bb9e8ff6bbf", "8a803eaa-3226-4670-a324-af4008f7052b", "d6e4aaee-52b6-4889-898f-20e9e1aa2d90"],
+      "cards": ["f022a91d-9f33-4247-9431-672647e97ecf", "54a5b41c-3180-480c-a38e-c916f9a0fe00", "e88a5e5c-dcc6-4677-9b51-c0c9cd03342c", "9b4481ea-841e-4d8a-9ca4-9120329ce822", 
+        "7ce0aa94-3e80-464f-8023-4154a5c091e1"]
+    },
+    {
+      "_id": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "name": "psykologia",
+      "parts": ["3b6e0d6f-b31a-4057-b126-0b16496c97e8", "d45e48d7-265e-42b2-823d-8319dcba2456", "3db5f05c-038c-4248-8b9e-8318327dd294"],
+      "cards": ["53c80765-baed-4ec8-b4f0-7af292f55607", "1b509adb-36fd-40e0-80e6-c4f7a60dc8dd", "0dcb944b-448f-474e-b6d9-90375f676d7b", 
+        "e6a3004f-c7f1-4031-984c-79b45316abce", "1e05c6e7-d41a-491d-b6e1-69d86d75fea5", "2e29d4d2-f4bb-46e2-9df7-be002bc18117"]
+    }
+  ],
+  "parts": [
+    {
+      "_id": "65ee4caf-04d8-4bee-9d82-2bb9e8ff6bbf",
+      "name": "viestintäoikeus",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "cards": ["f022a91d-9f33-4247-9431-672647e97ecf", "54a5b41c-3180-480c-a38e-c916f9a0fe00"]
+    },
+    {
+      "_id": "8a803eaa-3226-4670-a324-af4008f7052b",
+      "name": "rikosoikeus",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "cards": ["e88a5e5c-dcc6-4677-9b51-c0c9cd03342c"]
+    },
+    {
+      "_id": "d6e4aaee-52b6-4889-898f-20e9e1aa2d90",
+      "name": "sosiaalioikeuden perusteet",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "cards": ["9b4481ea-841e-4d8a-9ca4-9120329ce822", "7ce0aa94-3e80-464f-8023-4154a5c091e1"]
+    },
+    {
+      "_id": "3b6e0d6f-b31a-4057-b126-0b16496c97e8",
+      "name": "Learning and the testing effect",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "cards": ["53c80765-baed-4ec8-b4f0-7af292f55607", "1b509adb-36fd-40e0-80e6-c4f7a60dc8dd"]
+    },
+    {
+      "_id": "d45e48d7-265e-42b2-823d-8319dcba2456",
+      "name": "Psykiatriset sairaudet",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "cards": ["0dcb944b-448f-474e-b6d9-90375f676d7b", "e6a3004f-c7f1-4031-984c-79b45316abce"]
+    },
+    {
+      "_id": "3db5f05c-038c-4248-8b9e-8318327dd294",
+      "name": "tilastotiede",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "cards": ["1e05c6e7-d41a-491d-b6e1-69d86d75fea5", "2e29d4d2-f4bb-46e2-9df7-be002bc18117"]
+    }
+  ],
+  "users": [
+    {
+      "_id": "48dad722-570e-47a7-9840-f3c1ee9344b9",
+      "username": "sini",
+      "passwordHash": "$2b$10$KY5zUhawgsoz9BDKb.8INebl3oFL95SbodxNWCanTy/yF9FtfqWMW",
+      "correctAnswers": []
+    },
+    {
+      "_id": "9e7170e4-ce9f-4ac8-b969-4e8691d38079",
+      "username": "amira",
+      "passwordHash": "$2b$10$KY5zUhawgsoz9BDKb.8INebl3oFL95SbodxNWCanTy/yF9FtfqWMW",
+      "correctAnswers": []
+    }
+  ],
+  "questiontypes": [
+    {      
+      "_id": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "name": "multiple choice"
+    }, 
+    {
+      "_id": "6a484e0b-260c-48eb-9690-a42783aeff66",
+      "name": "open ended"
+    }
+  ],
+  "cards": [
+    {
+      "_id": "f022a91d-9f33-4247-9431-672647e97ecf",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "partId": "65ee4caf-04d8-4bee-9d82-2bb9e8ff6bbf",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Viestintäoikeuden tutkimus alkoi Helsingin yliopiston oikeustieteellisessä tiedekunnassa vuonna...",
+      "answers": ["7e4a2976-2f8e-41ec-8842-e634f77294f8", "4a2e14c8-caae-4f63-b8d7-424aa0ed535a", "1e04e3ba-c450-49b9-abf9-3a4b86dffa57", "11769bd3-14df-48a9-8d97-7adb1ea770fa"]
+    },
+    {
+      "_id": "54a5b41c-3180-480c-a38e-c916f9a0fe00",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "partId": "65ee4caf-04d8-4bee-9d82-2bb9e8ff6bbf",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Viestintäoikeuden tutkimuksesta tekee Korpisaaren mukaan mielenkiintoista mm. se, että",
+      "answers": ["1c5fd4c3-b209-4571-a2e4-5d620f65ada2", "41c5792b-1e04-4510-ab84-8c71c958d746", "f135a94b-cac0-415f-a6b3-55bbb9048bf4", "4c187d96-5df3-4009-86c3-1c6ba0c0ac5c"]
+    },
+    {
+      "_id": "e88a5e5c-dcc6-4677-9b51-c0c9cd03342c",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "partId": "8a803eaa-3226-4670-a324-af4008f7052b",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Mitä rikosoikeudellista periaatetta 'nulla poena sine lege' - lausahdusta käytetään usein kuvaamaan?",
+      "answers": ["c174b500-3c48-4e1d-9315-4cadc4bf843e", "32698efa-5695-4fe7-a1e9-5c907284c6e3", "1be488ae-76b4-4cc1-aead-21d47c428e42", "d74d9221-6f5f-4504-a1a6-01f49be8370e"]
+    },
+    {
+      "_id": "9b4481ea-841e-4d8a-9ca4-9120329ce822",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "partId": "d6e4aaee-52b6-4889-898f-20e9e1aa2d90",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Mikä tai mitkä seuraavista ilmiöistä kuuluvat sosiaalioikeuden piiriin?",
+      "answers": ["bc04925c-f971-4424-9475-a38985acf7e3", "c734959a-4eab-4b04-8d24-19646779521b", "9732c93f-5d53-4601-98a4-fc94c7581ffe", "cfffeae4-a607-4ac0-b17f-4b2ac5ccdc80"]
+    },
+    {
+      "_id": "7ce0aa94-3e80-464f-8023-4154a5c091e1",
+      "courseId": "513b7446-00ff-430f-8b9a-d0c3b28aff0a",
+      "partId": "d6e4aaee-52b6-4889-898f-20e9e1aa2d90",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Sosiaalioikeudessa keskeisessä asemassa on yksilön oikeusaseman hahmottaminen...",
+      "answers": ["36155c6f-5ef9-4347-8efc-f74ca86ac0fa", "...suhteessa oikeushenkilöiden oikeusasemaan", "21ab4919-5fd3-494b-880c-5d14680b6c30","0f5a3002-dbbb-4f5b-8103-248a5860c1bf"]
+    },
+    {
+      "_id": "53c80765-baed-4ec8-b4f0-7af292f55607",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "partId": "3b6e0d6f-b31a-4057-b126-0b16496c97e8",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Artikkelin 'Learning and the testing effect' mukaan testing effect -ilmiö viittaa siihen, että ",
+      "answers": ["06d9179e-1990-4715-a3bf-168ede22d575", "5540a700-6052-4d2e-8783-cb84f201a1ad", "311969b4-466a-446f-8191-8dce995863c7", "238b239b-495f-4b29-81bc-335e0e85b4da"]
+    },
+    {
+      "_id": "1b509adb-36fd-40e0-80e6-c4f7a60dc8dd",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "partId": "3b6e0d6f-b31a-4057-b126-0b16496c97e8",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Artikkelin 'Learning and the testing effect' mukaan testing effect -ilmiötä on tutkittu...",
+      "answers": ["4a52730c-8827-4322-af97-190757998768", "66afb108-3dd8-453b-a521-cb1e22ea84cb", "ed0df581-071b-455b-a213-91aeeb3121b7", "293fcec2-32c9-4542-b278-468ec60b4bc4"]
+    },
+    {
+      "_id": "0dcb944b-448f-474e-b6d9-90375f676d7b",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "partId": "d45e48d7-265e-42b2-823d-8319dcba2456",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Artikkelin 'Psykiatriset sairaudet' mukaan, masennus on ",
+      "answers": ["8cc6d954-90e7-423e-b510-3576366e3d57", "5066b384-4204-48ba-8692-1e6cae2adc95", "d7585070-573a-466c-8b6a-f2389705be77", "93ef49d1-d179-4dad-a949-9424c6bef25c"]
+    },
+    {
+      "_id": "e6a3004f-c7f1-4031-984c-79b45316abce",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "partId": "d45e48d7-265e-42b2-823d-8319dcba2456",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Artikkelin 'Psykiatriset sairaudet' mukaan",
+      "answers": ["d25eb1b1-d84f-40d4-9086-a4efbd9b914b", "1b0c267f-f575-4b2d-9208-53c9fa6d4e0b", "dc0f4e68-ad37-493f-b5b2-e315aeb86295", "2cd1a1db-cdc2-47a0-85b1-f4ec14c16838"]
+    },
+    {
+      "_id": "1e05c6e7-d41a-491d-b6e1-69d86d75fea5",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "partId": "3db5f05c-038c-4248-8b9e-8318327dd294",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Tilastokirjan mukaan Pearsonin korrelaatiokerroin",
+      "answers": ["1c06a621-5c8c-4f76-8a34-3651cc37484f", "6929a6ce-eaac-4114-a2cc-33229db9796f", "e1c21a1f-c87e-4628-a957-17d69e2583ad", "d80c4ccb-b7d7-4003-a960-ab7450840b37"]
+    },
+    {
+      "_id": "2e29d4d2-f4bb-46e2-9df7-be002bc18117",
+      "courseId": "2f6043ef-2efd-4fe4-85a6-19813ede9556",
+      "partId": "3db5f05c-038c-4248-8b9e-8318327dd294",
+      "questiontypeId": "3aa89fe7-41a6-4977-8298-1684f0497006",
+      "question": "Tilastokirjan mukaan t-testi",
+      "answers": ["003ab89f-aed1-4e8d-a2e0-333d833e38b0", "6411ce92-4a21-4d5b-91a5-a5d079757245", "1213d3cd-6356-427d-ad8e-eb753ca88016", "463c9568-1880-47c4-898e-bd9da598ce8f"]
+    }
+  ],
+  "answers":
+  [
+    {
+      "_id": "7e4a2976-2f8e-41ec-8842-e634f77294f8",
+      "correctAnswer": true,
+      "content": "2002"
+    },
+    {
+      "_id": "4a2e14c8-caae-4f63-b8d7-424aa0ed535a",
+      "correctAnswer": false,
+      "content": "2015"
+    },
+    {
+      "_id": "1e04e3ba-c450-49b9-abf9-3a4b86dffa57",
+      "correctAnswer": false,
+      "content": "1996"
+    },
+    {
+      "_id": "11769bd3-14df-48a9-8d97-7adb1ea770fa",
+      "correctAnswer": false,
+      "content": "2010"
+    },
+    {
+      "_id": "1c5fd4c3-b209-4571-a2e4-5d620f65ada2",
+      "correctAnswer": true,
+      "content": "Jutut ratkeavat tuomioistuimissa usein periaatepunnintana ehdottomien 'kyllä tai ei' -sääntöjen sijaan."
+    },
+    {
+      "_id": "41c5792b-1e04-4510-ab84-8c71c958d746",
+      "correctAnswer": false,
+      "content": "Tutkimusta tehdään tyypillisesti kansainvälisessä yhteistyössä ulkomaisten yliopistojen kanssa."
+    },
+    {
+      "_id": "f135a94b-cac0-415f-a6b3-55bbb9048bf4",
+      "correctAnswer": false,
+      "content": "Tutkimusta tehdään tyypillisesti yhteistyössä muiden alojen tutkijoiden kanssa."
+    },
+    {
+      "_id": "4c187d96-5df3-4009-86c3-1c6ba0c0ac5c",
+      "correctAnswer": false,
+      "content": "Tutkimus saa tyypillisesti runsaasti mediahuomiota ja tutkijat pääsevät keskustelemaan tutkimuksestaan yleisön kanssa."
+    },
+    {
+      "_id": "c174b500-3c48-4e1d-9315-4cadc4bf843e",
+      "correctAnswer": true,
+      "content": "Rikosoikeudellinen legaliteettiperiaate."
+    },
+    {
+      "_id": "32698efa-5695-4fe7-a1e9-5c907284c6e3",
+      "correctAnswer": false,
+      "content": "Rikosoikeudellinen tahallisuusperiaate."
+    },
+    {
+      "_id": "1be488ae-76b4-4cc1-aead-21d47c428e42",
+      "correctAnswer": false,
+      "content": "Rikosoikeudellinen syy-yhteys-periaate."
+    },
+    {
+      "_id": "d74d9221-6f5f-4504-a1a6-01f49be8370e",
+      "correctAnswer": false,
+      "content": "Ihmisarvon loukkaamattomuuden periaate."
+    },
+    {
+      "_id": "bc04925c-f971-4424-9475-a38985acf7e3",
+      "correctAnswer": true,
+      "content": "Asuminen."
+    },
+    {
+      "_id": "c734959a-4eab-4b04-8d24-19646779521b",
+      "correctAnswer": true,
+      "content": "Työllisyys"
+    },
+    {
+      "_id": "9732c93f-5d53-4601-98a4-fc94c7581ffe",
+      "correctAnswer": true,
+      "content": "Terveyden suojelu"
+    },
+    {
+      "_id": "cfffeae4-a607-4ac0-b17f-4b2ac5ccdc80",
+      "correctAnswer": false,
+      "content": "Kuluttajien suojelu"
+    },
+    {
+      "_id": "36155c6f-5ef9-4347-8efc-f74ca86ac0fa",
+      "correctAnswer": true,
+      "content": "...julkisen vallankäytön kohteena"
+    },
+    {
+      "_id": "5072fc4c-2a6b-4a9d-babd-1f61c06bd320",
+      "correctAnswer": false,
+      "content": "...suhteessa oikeushenkilöiden oikeusasemaan"
+    },
+    {
+      "_id": "21ab4919-5fd3-494b-880c-5d14680b6c30",
+      "correctAnswer": false,
+      "content": "...muiden oikeushenkilöiden oikeustoimien kohteena"
+    },   
+    {
+      "_id": "0f5a3002-dbbb-4f5b-8103-248a5860c1bf",
+      "correctAnswer": false,
+      "content": "muusta yhteiskunnasta erillisenä autonomisena kokonaisuutena"
+    },
+    {
+      "_id": "06d9179e-1990-4715-a3bf-168ede22d575",
+      "correctAnswer": true,
+      "content": "osaamisen testaaminen opiskeltaessa uutta asiaa parantaa oppimisen laauta"
+    },
+    {
+      "_id": "5540a700-6052-4d2e-8783-cb84f201a1ad",
+      "correctAnswer": false,
+      "content": "testitilanne vaikuttaa opiskelijan suoriutumiseen keskimäärin suoritusta heikentävästä"
+    },
+    {
+      "_id": "311969b4-466a-446f-8191-8dce995863c7",
+      "correctAnswer": false,
+      "content": "testitilanne vaikuttaa opiskelijan suoriutumiseen keskimäärin suoritusta parantavasti"
+    },
+    {
+      "_id": "238b239b-495f-4b29-81bc-335e0e85b4da",
+      "correctAnswer": false,
+      "content": "standardoidun testaamisen omaksuminen opetussuunnitelmassa vaikuttaa opetukseen negatiivisesti"
+    },
+    {
+      "_id": "4a52730c-8827-4322-af97-190757998768",
+      "correctAnswer": true,
+      "content": "erittäin kattavasti (aiheesta on tehty lukuisia metatutkimuksia)"
+    },
+    {
+      "_id": "66afb108-3dd8-453b-a521-cb1e22ea84cb",
+      "correctAnswer": false,
+      "content": "jokseenkin kattavasti (aiheesta on tehty laadukkaasti toteutettuja tutkimuksia, mutta vain muutama metatutkimus"
+    },
+    {
+      "_id": "ed0df581-071b-455b-a213-91aeeb3121b7",
+      "correctAnswer": false,
+      "content": "jokseenkin heikosti (aiheesta on tehty useita tutkimuksia, mutta ei vielä metatutkimuksia"
+    },
+    {
+      "_id": "293fcec2-32c9-4542-b278-468ec60b4bc4",
+      "correctAnswer": false,
+      "content": "heikosti (aiheesta on tehty vain joitakin tutkimuksia, ja niissäkin on vakavia menetelmällisiä puutteita"
+    },
+    {
+      "_id": "8cc6d954-90e7-423e-b510-3576366e3d57",
+      "correctAnswer": true,
+      "content": "mielenterveyden häiriö, josta kärsii noin 6% väestöstä"
+    },
+    {
+      "_id": "5066b384-4204-48ba-8692-1e6cae2adc95",
+      "correctAnswer": true,
+      "content": "mielenterveyden häiriö, jonka hallitseva piirre on vähintään kahden viikon ajan jatkunut yhtäjaksoinen alakulon tunne"
+    },
+    {
+      "_id": "d7585070-573a-466c-8b6a-f2389705be77",
+      "correctAnswer": true,
+      "content": "mielenterveyden häiriö, joka saa usein alkunsa elämän suurista vastoinkäymisistä"
+    },
+    {
+      "_id": "93ef49d1-d179-4dad-a949-9424c6bef25c",
+      "correctAnswer": true,
+      "content": "mielenterveyden häiriö, jonka aikana voi esiintyä psykoottisia piirteitä"
+    },
+    {
+      "_id": "d25eb1b1-d84f-40d4-9086-a4efbd9b914b",
+      "correctAnswer": true,
+      "content": "skitsofrenia alkaa usein nuorella aikuisiällä"
+    },
+    {
+      "_id": "1b0c267f-f575-4b2d-9208-53c9fa6d4e0b",
+      "correctAnswer": false,
+      "content": "skitsofrenia on psykoottinen mielialahäiriö"
+    },
+    {
+      "_id": "dc0f4e68-ad37-493f-b5b2-e315aeb86295",
+      "correctAnswer": false,
+      "content": "tärkein skitsofreniaa ennakoiva riskitekijä on ensiasteen sukulaisella esiintyvä bipolaarihäiriö"
+    },
+    {
+      "_id": "2cd1a1db-cdc2-47a0-85b1-f4ec14c16838",
+      "correctAnswer": true,
+      "content": "skitsofrenian ympäristöön liittyviä riskitekijöitä voivat olla mm. odottavan äidin stressi, raskaudenaikaiset ja synnytyksen komplikaatiot"
+    },
+    {
+      "_id": "1c06a621-5c8c-4f76-8a34-3651cc37484f",
+      "correctAnswer": false,
+      "content": "on Spearmanin korrelaatiokertoimen jälkeen yleisin käytetty korrelaatiota kuvaava tunnusluku "
+    },
+    {
+      "_id": "6929a6ce-eaac-4114-a2cc-33229db9796f",
+      "correctAnswer": false,
+      "content": "on logistisessa regressioanalyysissa käytettävä tunnusluku"
+    },
+    {
+      "_id": "e1c21a1f-c87e-4628-a957-17d69e2583ad",
+      "correctAnswer": true,
+      "content": "lasketaan jakamalla kovarianssi keskihajontojen tulolla"
+    },
+    {
+      "_id": "d80c4ccb-b7d7-4003-a960-ab7450840b37",
+      "correctAnswer": true,
+      "content": "on tulomomenttikorrelaatiokerroin"
+    },
+    {
+      "_id": "003ab89f-aed1-4e8d-a2e0-333d833e38b0",
+      "correctAnswer": true,
+      "content": "on mikä tahansa tilastollinen testi, joka noudattaa Studentin t-jakaumaa kun nollahypoteesi on voimassa"
+    },
+    {
+      "_id": "6411ce92-4a21-4d5b-91a5-a5d079757245",
+      "correctAnswer": false,
+      "content": "on mikä tahansa tilastollinen testi, joka noudattaa Studentin t-jakaumaa kun vaihtoehtoinen hypoteesi on voimassa"
+    },
+    {
+      "_id": "1213d3cd-6356-427d-ad8e-eb753ca88016",
+      "correctAnswer": false,
+      "content": "on mikä tahansa tilastollinen testi, joka noudattaa Spearmanin t-jakaumaa kun vaihtoehtoinen hypoteesi on voimassa"
+    },
+    {
+      "_id": "463c9568-1880-47c4-898e-bd9da598ce8f",
+      "correctAnswer": false,
+      "content": "on mikä tahansa tilastollinen testi, joka noudattaa Spearmanin t-jakaumaa kun vaihtoehtoinen hypoteesi ei ole voimassa"
+    }
+  ]
+}

@@ -16,13 +16,7 @@ const partSchema = new mongoose.Schema({
   courseId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Course'
-  },
-  cards: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Card'
-    }
-  ],
+  }
 })
 
 partSchema.set('toJSON', {

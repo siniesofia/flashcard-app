@@ -19,11 +19,7 @@ const answerSchema = new mongoose.Schema({
   content: {
     type: String,
     required: true
-  },
-  cardId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Card'
-  },
+  }
 })
 
 answerSchema.set('toJSON', {

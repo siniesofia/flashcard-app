@@ -8,7 +8,13 @@ if (process.argv.length<3) {
 const password = process.argv[2]
 
 const url =
-  `mongodb+srv://fullstack:${password}@cluster0.qjipx.mongodb.net/flashcard-app?retryWrites=true&w=majority`
+  'mongodb+srv://paasykoetreenit:${password}@cluster0.ephkn.mongodb.net/flashcard-app?retryWrites=true&w=majority'
+  // `mongodb+srv://fullstack:${password}@cluster0.qjipx.mongodb.net/flashcard-app?retryWrites=true&w=majority`
+  // `mongodb+srv://fullstack:${password}@cluster0.qjipx.mongodb.net/flashcard-app?retryWrites=true&w=majority`
+
+
+
+
 
 mongoose.connect(url)
 
