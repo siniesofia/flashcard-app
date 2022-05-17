@@ -18,7 +18,7 @@ const url =
 
 mongoose.connect(url)
 
-const cardSchema = new mongoose.Schema({
+const questionSchema = new mongoose.Schema({
   id: Number,
   courseId: Number,
   partId: Number,
@@ -27,9 +27,9 @@ const cardSchema = new mongoose.Schema({
   correctAnswerId: Number
 })
 
-const Card = mongoose.model('Card', cardSchema)
+const Question = mongoose.model('Question', questionSchema)
 
-const card = new Card({
+const question = new Question({
   id: 10,
   courseId: 1,
   partId: 2,
@@ -55,8 +55,8 @@ const card = new Card({
   correctAnswerId: 4
 })
 
-card.save().then(() => {
-  console.log('card saved!')
+question.save().then(() => {
+  console.log('question saved!')
   mongoose.connection.close()
 })
 

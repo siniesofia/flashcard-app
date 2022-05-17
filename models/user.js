@@ -17,9 +17,9 @@ const userSchema = mongoose.Schema({
   passwordHash: String,
   correctAnswers: [
     {
-      card: {
+      question: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Card'
+        ref: 'Question'
       },
       timestamps: Object
     }

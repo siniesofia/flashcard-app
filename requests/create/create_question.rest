@@ -1,0 +1,17 @@
+POST http://localhost:3001/api/questions
+Content-Type: application/json
+
+{
+  "content": "Mikä on oikea vuosiluku?",
+  "courseId": "626017b67a35cb27312f4201",
+  "partId": "62601dd0b81b980fa7bdcf43",
+  "questiontypeId": "62601e90b81b980fa7bdcf56",
+  "answers": [
+    "62601f05b81b980fa7bdcf58",
+    "62601f11b81b980fa7bdcf5a",
+    "62601f1eb81b980fa7bdcf5c",
+    "62601f26b81b980fa7bdcf5e"
+  ]
+}
+
+    

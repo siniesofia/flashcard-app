@@ -1,1 +1,0 @@
-DELETE http://localhost:3001/api/cards/620e2fd17dc3c4817998daad
