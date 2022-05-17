@@ -8,10 +8,10 @@ const userSchema = mongoose.Schema({
     unique: true,
     required: 'Sähköpostiosoite vaaditaan',
     validate: {
-      validator: function(v) {
+      validator: function (v) {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v)
       },
-      message: "Tarkista sähköpostiosoite"
+      message: 'Tarkista sähköpostiosoite',
     },
   },
   passwordHash: String,
@@ -19,11 +19,11 @@ const userSchema = mongoose.Schema({
     {
       question: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Question'
+        ref: 'Question',
       },
-      timestamps: Object
-    }
-  ]
+      timestamps: Object,
+    },
+  ],
 })
 
 userSchema.plugin(uniqueValidator)
@@ -35,7 +35,7 @@ userSchema.set('toJSON', {
     delete returnedObject.__v
     // the passwordHash should not be revealed
     delete returnedObject.passwordHash
-  }
+  },
 })
 
 const User = mongoose.model('User', userSchema)
