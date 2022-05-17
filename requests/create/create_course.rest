@@ -2,7 +2,7 @@ POST http://localhost:3001/api/courses
 Content-Type: application/json
 
 {
-    "name": "psykologia",
+    "name": "Suomen presidentit",
     "year": "2022"
 }
     
