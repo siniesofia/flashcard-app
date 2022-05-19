@@ -2,6 +2,6 @@ POST http://localhost:3001/api/parts
 Content-Type: application/json
 
 {
-    "name": "Helpot kysymykset", 
-    "courseId": "6283c37ea2c3a1cf216dc314"
+    "name": "Artikkeli 3", 
+    "courseId": "6283a9b003e06ecedfc78eb4"
 }

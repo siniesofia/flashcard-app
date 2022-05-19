@@ -4,7 +4,7 @@ const Course = require('../models/course')
 
 
 partsRouter.get('/', async (request, response) => {
-  const parts = await Part.find({}).populate('courseId', { name: 1 }).populate('questions', { question: 1 })
+  const parts = await Part.find({}).populate('courseId', { name: 1 })
   response.json(parts.map(parts => parts.toJSON()))
 })
 

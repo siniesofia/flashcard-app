@@ -3,7 +3,7 @@ const Course = require('../models/course')
 
 
 coursesRouter.get('/', async (request, response) => {
-  const courses = await Course.find({}).populate('parts', { name: 1 }).populate('questions', { question: 1 })
+  const courses = await Course.find({})
   response.json(courses.map(courses => courses.toJSON()))
 })
 
