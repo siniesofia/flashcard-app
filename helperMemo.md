@@ -12,6 +12,8 @@
 - **MVP** change log out -button to icon
 - allow admin users to add data from ui
 - allow basic users to add data from ui
+- add breadcrumbs
+- 
 
 ## Backend
 
