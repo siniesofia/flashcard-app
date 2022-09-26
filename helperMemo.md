@@ -8,12 +8,11 @@
 - **MVP** randomise order of questions when rendered
 - **MVP** add captcha and email confirmation when signing up
 - **MVP** render questions one by one
-- **MVP** chosen part -> chosen parts
 - **MVP** change log out -button to icon
 - allow admin users to add data from ui
 - allow basic users to add data from ui
 - add breadcrumbs
-- 
+-
 
 ## Backend
 
@@ -39,3 +38,4 @@
 - changes to the main menu
 - **MVP** enable registration
 - create omat tiedot page
+- **MVP** chosen part -> chosen parts

@@ -24,6 +24,10 @@ const userSchema = mongoose.Schema({
       timestamps: Object,
     },
   ],
+  role: {
+    type: String,
+    default: 'user',
+  },
 })
 
 userSchema.plugin(uniqueValidator)
