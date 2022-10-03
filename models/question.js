@@ -9,9 +9,10 @@ const questionSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Part',
   },
-  questiontypeId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Questiontype',
+  questiontype: {
+    type: String,
+    enum: ['monivalinta', 'avoin'],
+    required: true,
   },
   content: {
     type: String,
@@ -19,8 +20,18 @@ const questionSchema = new mongoose.Schema({
   },
   answers: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Answer',
+      id: {
+        type: String,
+        required: true,
+      },
+      correctAnswer: {
+        type: Boolean,
+        required: true,
+      },
+      content: {
+        type: String,
+        required: true,
+      },
     },
   ],
 })

@@ -1,14 +1,15 @@
+const { v4: uuidv4 } = require('uuid')
 const questionsRouter = require('express').Router()
 const Question = require('../models/question')
-const Course = require('../models/course')
-const Part = require('../models/part')
+// const Course = require('../models/course')
+// const Part = require('../models/part')
 
 questionsRouter.get('/', async (request, response) => {
   const questions = await Question.find({})
     .populate('partId', { name: 1 })
     .populate('courseId', { name: 1 })
-    .populate('questiontypeId', { name: 1 })
-    .populate('answers')
+  // .populate('questiontypeId', { name: 1 })
+  // .populate('answers')
   response.json(questions.map(questions => questions.toJSON()))
 })
 
@@ -24,15 +25,18 @@ questionsRouter.get('/:id', async (request, response) => {
 questionsRouter.post('/', async (request, response) => {
   const body = request.body
 
-  const course = await Course.findById(body.courseId)
-  const part = await Part.findById(body.partId)
+  const newAnswers = body.answers.map(answer => ({
+    id: uuidv4(),
+    correctAnswer: answer.correctAnswer,
+    content: answer.content,
+  }))
 
   const question = new Question({
     courseId: body.courseId,
     partId: body.partId,
-    questiontypeId: body.questiontypeId,
+    questiontype: body.questiontype,
     content: body.content,
-    answers: body.answers,
+    answers: newAnswers,
   })
 
   const savedQuestion = await question.save()
