@@ -47,18 +47,6 @@ const treeNodeSchema = new mongoose.Schema({
       },
     },
   ],
-  parent: [
-    {
-      version: {
-        type: Number,
-        required: true,
-      },
-      value: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'TreeNode',
-      },
-    },
-  ],
   children: [
     {
       version: {
