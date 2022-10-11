@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/treeNodes
+Content-Type: application/json
+
+{
+  "name": "Kappale2",
+  "description": "viestintää",
+  "course": "6283a9b003e06ecedfc78eb4",
+  "parent": "63455472fad419bcf73623f5"
+}

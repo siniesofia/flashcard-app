@@ -1,8 +1,14 @@
 const mongoose = require('mongoose')
 
 const courseSchema = new mongoose.Schema({
-  name: String,
-  year: String,
+  name: {
+    type: String,
+    required: true,
+  },
+  year: {
+    type: String,
+    required: true,
+  },
 })
 
 courseSchema.set('toJSON', {

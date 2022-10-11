@@ -5,24 +5,6 @@ const treeNodeSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
-
-  //"access" field will relate to functionality
-  //to access a node by specific users
-
-  // access: [
-  //   {
-  //     version: {
-  //       type: Number,
-  //       required: true,
-  //     },
-  //     value: [
-  //       {
-  //         type: mongoose.Schema.Types.ObjectId,
-  //         ref: 'User',
-  //       },
-  //     ],
-  //   },
-  // ],
   name: [
     {
       version: {
@@ -47,18 +29,16 @@ const treeNodeSchema = new mongoose.Schema({
       },
     },
   ],
-  children: [
+  parent: [
     {
       version: {
         type: Number,
         required: true,
       },
-      value: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: 'TreeNode',
-        },
-      ],
+      value: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'TreeNode',
+      },
     },
   ],
   questions: [
@@ -75,6 +55,11 @@ const treeNodeSchema = new mongoose.Schema({
       ],
     },
   ],
+  course: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Course',
+    required: true,
+  },
 })
 
 treeNodeSchema.set('toJSON', {

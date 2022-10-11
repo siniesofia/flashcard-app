@@ -1,7 +1,6 @@
 const coursesRouter = require('express').Router()
 const Course = require('../models/course')
 
-
 coursesRouter.get('/', async (request, response) => {
   const courses = await Course.find({})
   response.json(courses.map(courses => courses.toJSON()))
@@ -27,7 +26,6 @@ coursesRouter.post('/', async (request, response) => {
 
   const savedCourse = await course.save()
   response.json(savedCourse.toJSON())
-
 })
 
 coursesRouter.delete('/:id', async (request, response) => {
@@ -36,4 +34,3 @@ coursesRouter.delete('/:id', async (request, response) => {
 })
 
 module.exports = coursesRouter
-

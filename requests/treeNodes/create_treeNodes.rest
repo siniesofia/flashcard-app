@@ -1,7 +1,0 @@
-POST http://localhost:3001/api/treeNodes
-Content-Type: application/json
-
-{
-  "name": "firstCourse",
-  "description": "here goes!"
-}
