@@ -3,7 +3,7 @@ const TreeNode = require('../models/treeNode')
 
 treeNodesRouter.get('/allTrees', async (req, res) => {
   try {
-    const treeNodes = await TreeNode.find({})
+    const treeNodes = await TreeNode.find({ isDeleted: false })
     res.json(treeNodes.map(nodes => nodes.toJSON()))
   } catch (e) {
     console.log(`Error in treeNodesRouter.get('/'): ${e}`)
@@ -74,11 +74,15 @@ treeNodesRouter.post('/updateNode/:id', async (req, res) => {
   try {
     const body = req.body
 
+    const treeNodeInTree = await TreeNode.findById(req.params.id)
+
+    if (treeNodeInTree.isDeleted) {
+      res.status(204).end()
+    }
+
     const potentialDuplicate = await TreeNode.find({
       'name.value': body.name,
     })
-
-    const treeNodeInTree = await TreeNode.findById(req.params.id)
 
     if (!potentialDuplicate) {
       if (
@@ -103,6 +107,24 @@ treeNodesRouter.post('/updateNode/:id', async (req, res) => {
     res.json((await treeNodeInTree.save()).toJSON())
   } catch (e) {
     console.log(`Error in treeNodesRouter.post('/updateNode/:id'): ${e}`)
+  }
+})
+
+treeNodesRouter.delete('/softDelete/:id', async (req, res) => {
+  try {
+    await TreeNode.findByIdAndUpdate(req.params.id, { isDeleted: true })
+    res.status(204).end()
+  } catch (e) {
+    console.log(`Error in treeNodesRouter.delete('/softDelete/:id'): ${e}`)
+  }
+})
+
+treeNodesRouter.delete('/hardDelete/:id', async (req, res) => {
+  try {
+    await TreeNode.findByIdAndRemove(req.params.id)
+    res.status(204).end()
+  } catch (e) {
+    console.log(`Error in treeNodesRouter.delete('/hardDelete/:id'): ${e}`)
   }
 })
 

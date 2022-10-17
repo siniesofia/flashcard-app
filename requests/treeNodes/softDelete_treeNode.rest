@@ -1,0 +1,1 @@
+DELETE http://localhost:3001/api/treeNodes/softDelete/6345535bffc9c37bb8eb263e
