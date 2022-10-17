@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/treeNodes/updateNode/6345535bffc9c37bb8eb263e
+Content-Type: application/json
+
+{
+  "isDeleted": true
+}
+
+//testaa seuraavaksi kaikki muutkin fieldit kuin name, ja
+//testaa ne toisella objektilla koska vitun törkee pitkä
+//lista jo nimiä tällä :D

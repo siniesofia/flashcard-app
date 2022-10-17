@@ -1,41 +1,53 @@
 const treeNodesRouter = require('express').Router()
 const TreeNode = require('../models/treeNode')
 
-treeNodesRouter.get('/allTrees', async (request, response) => {
+treeNodesRouter.get('/allTrees', async (req, res) => {
   try {
     const treeNodes = await TreeNode.find({})
-    response.json(treeNodes.map(nodes => nodes.toJSON()))
+    res.json(treeNodes.map(nodes => nodes.toJSON()))
   } catch (e) {
     console.log(`Error in treeNodesRouter.get('/'): ${e}`)
   }
 })
 
-treeNodesRouter.get('/oneTree/:id', async (request, response) => {
+treeNodesRouter.get('/oneTree/:id', async (req, res) => {
   try {
-    const treeNodeInTree = await TreeNode.findById(request.params.id)
-    console.log('treeNodeInTree')
+    const treeNodeInTree = await TreeNode.findById(req.params.id)
     if (treeNodeInTree) {
       const rootNode = treeNodeInTree.course
       const treeInQuestion = await TreeNode.find({ course: rootNode })
-      response.json(treeInQuestion.map(nodes => nodes.toJSON()))
+      res.json(treeInQuestion.map(nodes => nodes.toJSON()))
     } else {
-      response.status(404).end()
+      res.status(404).end()
     }
   } catch (e) {
-    console.log(`Error in treeNodesRouter.get('/:id'): ${e}`)
+    console.log(`Error in treeNodesRouter.get('/oneTree/:id'): ${e}`)
   }
 })
 
-treeNodesRouter.post('/', async (request, response) => {
+treeNodesRouter.get('/oneNode/:id', async (req, res) => {
   try {
-    const body = request.body
+    const treeNodeInTree = await TreeNode.findById(req.params.id)
+    if (treeNodeInTree) {
+      res.json(treeNodeInTree.toJSON())
+    } else {
+      res.status(404).end()
+    }
+  } catch (e) {
+    console.log(`Error in treeNodesRouter.get('/oneNode/:id'): ${e}`)
+  }
+})
+
+treeNodesRouter.post('/', async (req, res) => {
+  try {
+    const body = req.body
 
     const potentialDuplicate = await TreeNode.findOne({
       'name.value': body.name,
     })
 
     if (potentialDuplicate) {
-      response.status(400).end('Nimi on jo käytössä')
+      res.status(400).end('Nimi on jo käytössä')
       return
     }
 
@@ -52,10 +64,56 @@ treeNodesRouter.post('/', async (request, response) => {
 
     const savedTreeNode = await treeNode.save()
 
-    response.json(savedTreeNode.toJSON())
+    res.json(savedTreeNode.toJSON())
   } catch (e) {
     console.log(`Error in treeNodesRouter.post('/'): ${e}`)
   }
 })
+
+treeNodesRouter.post('/updateNode/:id', async (req, res) => {
+  try {
+    const body = req.body
+
+    const potentialDuplicate = await TreeNode.find({
+      'name.value': body.name,
+    })
+
+    const treeNodeInTree = await TreeNode.findById(req.params.id)
+
+    if (!potentialDuplicate) {
+      if (
+        potentialDuplicate.length > 1 ||
+        potentialDuplicate.id !== treeNodeInTree.id
+      ) {
+        res.status(400).end('Nimi on jo käytössä')
+        return
+      }
+    }
+
+    Object.keys(body).forEach(key => {
+      if (key === 'isDeleted' || key === 'id') {
+        return
+      }
+      treeNodeInTree[key].push({
+        version: getNewVersion(treeNodeInTree[key]),
+        value: body[key],
+      })
+    })
+
+    res.json((await treeNodeInTree.save()).toJSON())
+  } catch (e) {
+    console.log(`Error in treeNodesRouter.post('/updateNode/:id'): ${e}`)
+  }
+})
+
+const getNewVersion = array => {
+  let newestVersion = 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].version > newestVersion) {
+      newestVersion = array[i].version
+    }
+  }
+  return newestVersion + 1
+}
 
 module.exports = treeNodesRouter
