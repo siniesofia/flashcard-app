@@ -1,6 +1,15 @@
 const treeNodesRouter = require('express').Router()
 const TreeNode = require('../models/treeNode')
 
+treeNodesRouter.get('/oneTreeByCourse/:id', async (req, res) => {
+  try {
+    const treeInQuestion = await TreeNode.find({ course: req.params.id })
+    res.json(treeInQuestion.map(nodes => nodes.toJSON()))
+  } catch (e) {
+    console.log(`Error in treeNodesRouter.get('/oneTreeByCourse/:id'): ${e}`)
+  }
+})
+
 treeNodesRouter.get('/allTrees', async (req, res) => {
   try {
     const treeNodes = await TreeNode.find({ isDeleted: false })
@@ -14,8 +23,9 @@ treeNodesRouter.get('/oneTree/:id', async (req, res) => {
   try {
     const treeNodeInTree = await TreeNode.findById(req.params.id)
     if (treeNodeInTree) {
-      const rootNode = treeNodeInTree.course
-      const treeInQuestion = await TreeNode.find({ course: rootNode })
+      const treeInQuestion = await TreeNode.find({
+        course: treeNodeInTree.course,
+      })
       res.json(treeInQuestion.map(nodes => nodes.toJSON()))
     } else {
       res.status(404).end()
