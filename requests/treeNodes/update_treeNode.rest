@@ -1,6 +1,6 @@
-POST http://localhost:3001/api/treeNodes/updateNode/6345535bffc9c37bb8eb263e
+POST http://localhost:3001/api/treeNodes/updateNode/63455367ffc9c37bb8eb2645
 Content-Type: application/json
 
 {
-  "name": "newName"
+  "name": "newName2"
 }

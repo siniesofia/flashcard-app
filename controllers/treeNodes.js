@@ -112,6 +112,8 @@ treeNodesRouter.post('/updateNode/:id', async (req, res) => {
         version: getNewVersion(treeNodeInTree[key]),
         value: body[key],
       })
+
+      treeNodeInTree[key].sort((a, b) => b.version - a.version)
     })
 
     res.json((await treeNodeInTree.save()).toJSON())
