@@ -2,7 +2,7 @@ POST http://localhost:3001/api/courses
 Content-Type: application/json
 
 {
-    "name": "testi",
+    "name": "oikis22",
     "year": "2022"
 }
     

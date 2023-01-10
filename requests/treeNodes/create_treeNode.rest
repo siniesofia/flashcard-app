@@ -2,8 +2,8 @@ POST http://localhost:3001/api/treeNodes
 Content-Type: application/json
 
 {
-  "name": "testi2.2",
-  "description": "asdfasdf",
-  "course": "634552cbffc9c37bb8eb2634",
-  "parent": "635a81b267f19e7f065cc559"
+  "name": "Historiallinen tausta",
+  "description": "asdf",
+  "course": "6384aa089926db2335a53cf3",
+  "parent": "6384dae69926db2335a53dbf"
 }
