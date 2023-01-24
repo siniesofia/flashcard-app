@@ -2,5 +2,5 @@ POST http://localhost:3001/api/treeNodes/updateNode/63455367ffc9c37bb8eb2645
 Content-Type: application/json
 
 {
-  "name": "newName2"
+  "questions": ["63cf93ebaf4953c923e75478"]
 }

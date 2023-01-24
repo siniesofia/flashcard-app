@@ -2,8 +2,9 @@ POST http://localhost:3001/api/treeNodes
 Content-Type: application/json
 
 {
-  "name": "Historiallinen tausta",
+  "name": "Ekan luvun toisen alaluvun alaluku",
   "description": "asdf",
-  "course": "6384aa089926db2335a53cf3",
-  "parent": "6384dae69926db2335a53dbf"
+  "course": "63ce87c397e8871b0a8e6b61",
+  "parent": "63ce8dc497e8871b0a8e6bb6", 
+  "questions": ["63ce88a897e8871b0a8e6b6a", "63ce88d897e8871b0a8e6b6d"]
 }

@@ -1,15 +1,9 @@
 const { v4: uuidv4 } = require('uuid')
 const questionsRouter = require('express').Router()
 const Question = require('../models/question')
-// const Course = require('../models/course')
-// const Part = require('../models/part')
 
 questionsRouter.get('/', async (request, response) => {
   const questions = await Question.find({})
-    .populate('partId', { name: 1 })
-    .populate('courseId', { name: 1 })
-  // .populate('questiontypeId', { name: 1 })
-  // .populate('answers')
   response.json(questions.map(questions => questions.toJSON()))
 })
 
@@ -32,8 +26,6 @@ questionsRouter.post('/', async (request, response) => {
   }))
 
   const question = new Question({
-    courseId: body.courseId,
-    partId: body.partId,
     questiontype: body.questiontype,
     content: body.content,
     answers: newAnswers,

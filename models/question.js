@@ -1,14 +1,6 @@
 const mongoose = require('mongoose')
 
 const questionSchema = new mongoose.Schema({
-  courseId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Course',
-  },
-  partId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Part',
-  },
   questiontype: {
     type: String,
     enum: ['monivalinta', 'avoin'],

@@ -2,13 +2,24 @@ POST http://localhost:3001/api/questions
 Content-Type: application/json
 
 {
-	"content": "Mikä on oikea vuosiluku?",
-	"courseId": "626017b67a35cb27312f4201",
-	"partId": "62601dd0b81b980fa7bdcf43",
+	"content": "Mikä seuraavista väittämistä pitää kirjan mukaan paikkansa?",
+	"courseId": "63cf90a1af4953c923e7542e",
 	"questiontype": "monivalinta",
 	"answers": [{
+		"correctAnswer": false,
+		"content": "YVA-lainsäädännön mukaisena yhteysviranomaisena toimii aluehallintovirasto (AVI)."
+	},{
+		"correctAnswer": false,
+		"content": "Yhteysviranomainen laatii hankkeen ympäristövaikutusten arviointiohjelman ja toimittaa sen nähtäväksi eri osapuolten antamaa palautetta varten. "
+	},{
 		"correctAnswer": true,
-		"content": "tämä on vastaus"
+		"content": "Viranomainen laatii vaikutusten arvioinnin tuloksista ns. perustellun päätelmän, jossa se huomioi arviointiselostuksesta annetun palautteen. "
+	},{
+		"correctAnswer": false,
+		"content": "YVA-menettely toteutetaan pääsääntöisesti samanaikaisesti lupamenettelyn kanssa."
+	},{
+		"correctAnswer": false,
+		"content": "Osalliset voivat valittaa yhteysviranomaisen YVA-menettelyä koskevasta päätöksestä hallinto-oikeuteen"
 	}]
 }
 
