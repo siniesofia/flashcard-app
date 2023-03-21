@@ -7,6 +7,16 @@ usersRouter.get('/', async (request, response) => {
   response.json(users.map(u => u.toJSON()))
 })
 
+// usersRouter.get('/userid', async (request, response) => {
+//   const users = await User.find({})
+//   response.json(users.map(u => u.id))
+// })
+
+// usersRouter.get('/correctAnswers', async (request, response) => {
+//   const users = await User.find({})
+//   response.json(users.map(u => u.correctAnswers))
+// })
+
 usersRouter.post('/', async (request, response) => {
   const body = request.body
 

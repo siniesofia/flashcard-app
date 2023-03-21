@@ -2,9 +2,9 @@ POST http://localhost:3001/api/treeNodes
 Content-Type: application/json
 
 {
-  "name": "Ekan luvun toisen alaluvun alaluku",
-  "description": "asdf",
-  "course": "63ce87c397e8871b0a8e6b61",
-  "parent": "63ce8dc497e8871b0a8e6bb6", 
-  "questions": ["63ce88a897e8871b0a8e6b6a", "63ce88d897e8871b0a8e6b6d"]
+  "name": "Lähtökohtana vallitseva tuomarinideologia",
+  "description": "Luku 1.1",
+  "course": "63d00604c5e23b0997d7898d",
+  "parent": "63d007e5c5e23b0997d789db", 
+  "questions": ["63d00973c5e23b0997d789f8", "63d00adfc5e23b0997d78a00", "63d00b20c5e23b0997d78a05"]
 }

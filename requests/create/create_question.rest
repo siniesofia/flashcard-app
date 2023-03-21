@@ -2,24 +2,18 @@ POST http://localhost:3001/api/questions
 Content-Type: application/json
 
 {
-	"content": "Mikä seuraavista väittämistä pitää kirjan mukaan paikkansa?",
-	"courseId": "63cf90a1af4953c923e7542e",
+	"content": "Oikeudellisen ratkaisun teoria on",
+	"courseId": "63d00604c5e23b0997d7898d",
 	"questiontype": "monivalinta",
 	"answers": [{
-		"correctAnswer": false,
-		"content": "YVA-lainsäädännön mukaisena yhteysviranomaisena toimii aluehallintovirasto (AVI)."
-	},{
-		"correctAnswer": false,
-		"content": "Yhteysviranomainen laatii hankkeen ympäristövaikutusten arviointiohjelman ja toimittaa sen nähtäväksi eri osapuolten antamaa palautetta varten. "
-	},{
 		"correctAnswer": true,
-		"content": "Viranomainen laatii vaikutusten arvioinnin tuloksista ns. perustellun päätelmän, jossa se huomioi arviointiselostuksesta annetun palautteen. "
+		"content": "sekä käytännön lainsoveltamisen että oikeustieteellisen opetuksen ja tutkimuksen työväline"
 	},{
 		"correctAnswer": false,
-		"content": "YVA-menettely toteutetaan pääsääntöisesti samanaikaisesti lupamenettelyn kanssa."
+		"content": "käytännön lainsoveltamisen työväline mutta ei oikeustieteellisen opetuksen ja tutkimuksen työväline"
 	},{
 		"correctAnswer": false,
-		"content": "Osalliset voivat valittaa yhteysviranomaisen YVA-menettelyä koskevasta päätöksestä hallinto-oikeuteen"
+		"content": "opetuksen ja tutkimuksen työväline, mutta ei käytännön lainsoveltamisen työvälinen"
 	}]
 }
 
